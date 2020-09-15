@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1088226213848",
+    "firebase_url": "https://bsutstudapp.firebaseio.com",
+    "project_id": "bsutstudapp",
+    "storage_bucket": "bsutstudapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1088226213848:android:4f3a6359133855de01fcad",
+        "android_client_info": {
+          "package_name": "by.bsut.studapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1088226213848-32a99jma618tg75ppf7rt8ge4e313fts.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBg05ecH5AwTGNKqdvaAcY92TxH1b0cPXs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1088226213848-32a99jma618tg75ppf7rt8ge4e313fts.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
