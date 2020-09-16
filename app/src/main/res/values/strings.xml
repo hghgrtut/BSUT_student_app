@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">studapp</string>
+    <string name="changeTheme">Сменить тему</string>
 </resources>
