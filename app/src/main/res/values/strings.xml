@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">studapp</string>
+    <string name="auditories">Аудитории</string>
     <string name="changeTheme">Сменить тему</string>
+    <string name="dist">Dist'анционка</string>
+    <string name="site">Сайт университета</string>
+    <string name="timetable">Расписание</string>
 </resources>
