@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="by.bsut.studapp.ui.main.MainFragment"
-        android:label="MainFragment"
+        android:label="@string/title_main_fragment"
         tools:layout="@layout/main_fragment">
         <action
             android:id="@+id/action_mainFragment_to_auditoriesFragment"
@@ -16,6 +16,6 @@
     <fragment
         android:id="@+id/auditoriesFragment"
         android:name="by.bsut.studapp.ui.auditories.AuditoriesFragment"
-        android:label="AuditoriesFragment"
+        android:label="@string/title_auditories_fragment"
         tools:layout="@layout/auditories_fragment"/>
 </navigation>

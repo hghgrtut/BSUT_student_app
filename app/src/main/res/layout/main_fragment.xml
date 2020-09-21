@@ -7,12 +7,19 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.MainFragment">
 
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/bsut_image"
+        app:layout_constraintBottom_toTopOf="@+id/go_to_site"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <Button
         android:id="@+id/go_to_site"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/auditories"
+        android:text="@string/site"
+        style="@style/ButtonMainScreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,46 +27,42 @@
 
     <Button
         android:id="@+id/go_to_timetable"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/auditories"
+        style="@style/ButtonMainScreen"
+        android:text="@string/timetable"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/go_to_site" />
 
     <Button
         android:id="@+id/go_to_dist"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/auditories"
+        style="@style/ButtonMainScreen"
+        android:text="@string/dist"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/go_to_timetable" />
 
     <Button
         android:id="@+id/go_to_rektor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/auditories"
+        style="@style/ButtonMainScreen"
+        android:text="@string/question_to_rector"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/go_to_dist" />
 
     <Button
         android:id="@+id/go_to_obsch_org"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/auditories"
+        style="@style/ButtonMainScreen"
+        android:text="@string/obsch_org"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/go_to_rektor" />
 
     <Button
         android:id="@+id/go_to_auditories"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/ButtonMainScreen"
         android:text="@string/auditories"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/go_to_obsch_org" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

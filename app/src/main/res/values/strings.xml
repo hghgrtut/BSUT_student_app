@@ -2,7 +2,13 @@
     <string name="app_name">studapp</string>
     <string name="auditories">Аудитории</string>
     <string name="changeTheme">Сменить тему</string>
-    <string name="dist">Dist'анционка</string>
+    <string name="dist">Dist\'анционка</string>
+    <string name="question_to_rector">Вопрос ректору</string>
+    <string name="obsch_org">Общественные организации</string>
     <string name="site">Сайт университета</string>
     <string name="timetable">Расписание</string>
+
+    <!-- Fragment titles -->
+    <string name="title_auditories_fragment">Схема аудиторий</string>
+    <string name="title_main_fragment">BSUT one love</string>
 </resources>
