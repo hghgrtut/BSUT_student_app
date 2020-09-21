@@ -1,14 +1,9 @@
-# Name of workflow
 name: Build
-
-# Triggers
 on: 
   pull_request:
     branches: [ master ]
   push:
     branches: [ master ]
-
-# What to do
 jobs:
   build:
     runs-on: windows-latest
