@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">studapp</string>
+    <string name="app_name">BSUT studApp</string>
     <string name="auditories">Аудитории</string>
     <string name="changeTheme">Сменить тему</string>
     <string name="dist">Dist\'анционка</string>
