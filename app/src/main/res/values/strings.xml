@@ -11,4 +11,5 @@
     <!-- Fragment titles -->
     <string name="title_auditories_fragment">Схема аудиторий</string>
     <string name="title_main_fragment">BSUT one love</string>
+    <string name="title_timetable">Расписание</string>
 </resources>

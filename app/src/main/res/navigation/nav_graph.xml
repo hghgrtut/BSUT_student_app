@@ -12,10 +12,18 @@
         <action
             android:id="@+id/action_mainFragment_to_auditoriesFragment"
             app:destination="@id/auditoriesFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_timetableFragment"
+            app:destination="@id/timetableFragment" />
     </fragment>
     <fragment
         android:id="@+id/auditoriesFragment"
         android:name="by.bsut.studapp.ui.auditories.AuditoriesFragment"
         android:label="@string/title_auditories_fragment"
         tools:layout="@layout/auditories_fragment"/>
+    <fragment
+        android:id="@+id/timetableFragment"
+        android:name="by.bsut.studapp.ui.timetable.TimetableFragment"
+        android:label="@string/title_timetable"
+        tools:layout="@layout/fragment_timetable" />
 </navigation>

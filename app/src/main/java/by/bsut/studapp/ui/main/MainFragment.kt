@@ -12,7 +12,6 @@ import by.bsut.studapp.constants.BSUT_URL
 import by.bsut.studapp.constants.DIST_URL
 import by.bsut.studapp.constants.ENDPOINT_OBSCH_ORG
 import by.bsut.studapp.constants.ENDPOINT_REKTOR_QUESTION
-import by.bsut.studapp.constants.ENDPOINT_TIMETABLE
 
 class MainFragment : Fragment(R.layout.main_fragment) {
     private val navController by lazy(LazyThreadSafetyMode.NONE) { findNavController() }
@@ -47,9 +46,7 @@ class MainFragment : Fragment(R.layout.main_fragment) {
         }
 
         view.findViewById<Button>(R.id.go_to_timetable).setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW).apply {
-                data = Uri.parse(BSUT_URL + ENDPOINT_TIMETABLE) }
-            startActivity(intent)
+            navController.navigate(R.id.action_mainFragment_to_timetableFragment)
         }
     }
 }

@@ -6,3 +6,5 @@ const val ENDPOINT_REKTOR_QUESTION = "/contacts/electronic-appeal-rector"
 const val ENDPOINT_TIMETABLE = "/timetable"
 
 const val DIST_URL = "http://dist.bsut.by/"
+
+const val DATA_GITHUB_URL = ""
