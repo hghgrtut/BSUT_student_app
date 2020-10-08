@@ -23,7 +23,7 @@
         tools:layout="@layout/auditories_fragment"/>
     <fragment
         android:id="@+id/timetableFragment"
-        android:name="by.bsut.studapp.ui.timetable.TimetableFragment"
+        android:name="by.bsut.studapp.timetable.ui.TimetableFragment"
         android:label="@string/title_timetable"
         tools:layout="@layout/fragment_timetable" />
 </navigation>

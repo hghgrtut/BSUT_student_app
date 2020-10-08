@@ -3,13 +3,14 @@
     package="by.bsut.studapp">
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@drawable/logo_bsut"
         android:label="@string/app_name"
         android:roundIcon="@drawable/logo_bsut"
-        android:supportsRtl="true"
+        android:supportsRtl="false"
         android:theme="@style/AppTheme.Launcher">
         <activity
+            android:theme="@style/AppTheme"
             android:name=".ui.activity.MainActivity"
             android:label="@string/title_main_fragment">
             <intent-filter>
