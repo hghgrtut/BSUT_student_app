@@ -2,17 +2,15 @@ package by.bsut.studapp.timetable.presenter.preferences
 
 import android.content.SharedPreferences
 import by.bsut.studapp.preferences.SimplePreferenceEditor
-import by.bsut.studapp.timetable.data.Para
+import by.bsut.studapp.timetable.data.enums.WeekDays
+import by.bsut.studapp.timetable.data.enums.WeekMode
+import by.bsut.studapp.timetable.data.objects.Para
 
 class TimetablePreferenceEditor(private val preferences: SharedPreferences) :
     SimplePreferenceEditor(preferences) {
     fun setDay(newDay: Int) { setInt(DAY, newDay) }
 
-    fun getDay(): Int = preferences.getInt(DAY, 0)
-
-    fun setGroup(newGroup: String) { setString(GROUP, newGroup) }
-
-    fun getGroup(): String? = preferences.getString(GROUP, null)
+    fun getDay(): Int = preferences.getInt(DAY, WeekDays.MONDAY.ordinal)
 
     fun setMilitary(isMilitary: Boolean) { setBoolean(IS_MILITARY, isMilitary) }
 
@@ -22,8 +20,7 @@ class TimetablePreferenceEditor(private val preferences: SharedPreferences) :
 
     fun getPodroupa(): Int = preferences.getInt(PODGROUPA, Para.ALL_GROUPS)
 
-    fun setWeekMode(isUpperWeek: Boolean) { setBoolean(IS_UPPER_WEEK, isUpperWeek) }
+    fun setWeekMode(weekMode: Int) { setInt(IS_UPPER_WEEK, weekMode) }
 
-    fun getWeekMode(): Boolean = preferences.getBoolean(IS_UPPER_WEEK, true)
-
+    fun getWeekMode(): Int = preferences.getInt(IS_UPPER_WEEK, WeekMode.UPPER.ordinal)
 }

@@ -1,4 +1,4 @@
-package by.bsut.studapp.timetable.data
+package by.bsut.studapp.timetable.data.objects
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

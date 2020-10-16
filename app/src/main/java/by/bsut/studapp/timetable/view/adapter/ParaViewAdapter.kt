@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import by.bsut.studapp.R
-import by.bsut.studapp.timetable.data.Para
+import by.bsut.studapp.timetable.data.objects.Para
 
 class ParaViewAdapter(private val paras: List<Para?>) :
     RecyclerView.Adapter<ParaViewAdapter.ViewHolder>() {

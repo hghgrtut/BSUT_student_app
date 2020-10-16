@@ -7,4 +7,4 @@ const val ENDPOINT_TIMETABLE = "/timetable"
 
 const val DIST_URL = "http://dist.bsut.by/"
 
-const val DATA_GITHUB_URL = ""
+const val DATA_GITHUB_URL = "https://raw.githubusercontent.com/hghgrtut/BSUT_Stud_App_Data/master/"

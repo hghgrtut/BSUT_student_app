@@ -4,8 +4,8 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import by.bsut.studapp.timetable.data.Para
 import by.bsut.studapp.timetable.data.constants.TABLE_PARAS
+import by.bsut.studapp.timetable.data.objects.Para
 import by.bsut.studapp.timetable.presenter.dao.ParaDao
 import kotlinx.coroutines.CoroutineScope
 
