@@ -18,7 +18,7 @@ class TimetablePreferenceEditor(private val preferences: SharedPreferences) :
 
     fun setPodgroupa(newPodgroupa: Int) { setInt(PODGROUPA, newPodgroupa) }
 
-    fun getPodroupa(): Int = preferences.getInt(PODGROUPA, Para.ALL_GROUPS)
+    fun getPodgroupa(): Int = preferences.getInt(PODGROUPA, Para.ALL_GROUPS)
 
     fun setWeekMode(weekMode: Int) { setInt(IS_UPPER_WEEK, weekMode) }
 
