@@ -8,6 +8,13 @@
         app:showAsAction="always"/>
 
     <item
+        android:id="@+id/filterTimetable"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/settings"
+        app:showAsAction="ifRoom"/>
+
+
+    <item
         android:id="@+id/refreshTimetable"
         android:icon="@drawable/ic_change_theme"
         android:title="@string/refresh_timetable"

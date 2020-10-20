@@ -1,5 +1,6 @@
 package by.bsut.studapp.ui.activity
 
+import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.Menu
@@ -13,6 +14,7 @@ import by.bsut.studapp.timetable.presenter.api.RetrofitTimetableApiImplementatio
 import by.bsut.studapp.timetable.presenter.database.ParaRoomDatabase
 import by.bsut.studapp.timetable.presenter.preferences.PREFERENCES
 import by.bsut.studapp.timetable.presenter.preferences.TimetableNetworkPreferenceEditor
+import by.bsut.studapp.ui.activity.settings.SettingsActivity
 import by.bsut.studapp.utils.HelperFuns.showToast
 import kotlinx.android.synthetic.main.activity_main.toolbar
 import kotlinx.coroutines.CoroutineScope
@@ -44,6 +46,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         return when (item.itemId) {
             R.id.changeTheme -> changeTheme()
             R.id.refreshTimetable -> refreshTimetable()
+            R.id.filterTimetable -> goToSettings()
             else -> super.onOptionsItemSelected(item)
         }
     }
@@ -76,6 +79,11 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
             for (para in apiData.paras) { dao.insert(para) }
         }
+        return true
+    }
+
+    private fun goToSettings(): Boolean {
+        startActivity(Intent(this, SettingsActivity::class.java))
         return true
     }
 }

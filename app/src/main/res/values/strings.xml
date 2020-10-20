@@ -7,6 +7,11 @@
     <string name="site">Сайт университета</string>
     <string name="timetable">Расписание</string>
 
+    <!-- Filter summaries -->
+    <string name="filter_military">Военная кафедра</string>
+    <string name="filter_pogroupa_title">Подгруппа</string>
+    <string name="filter_pogroupa">Введите подгруппу</string>
+
     <!-- Fragment titles -->
     <string name="title_auditories_fragment">Схема аудиторий</string>
     <string name="title_main_fragment">BSUT one love</string>
@@ -30,9 +35,12 @@
     <!-- Toolbar menu items -->
     <string name="change_theme">Сменить тему</string>
     <string name="refresh_timetable">Обновить расписание</string>
+    <string name="settings">Настройки</string>
 
     <!-- Toasts -->
     <string name="toast_actual_version">You already have an actual version</string>
+    <string name="toast_error">Ошибка!</string>
+    <string name="toast_refresh_podgroupa">Подгруппа обновлена</string>
     <string name="toast_refresh_start">Расписание обновляется</string>
     <string name="toast_refresh_sucess">Успешно обновлено</string>
 </resources>

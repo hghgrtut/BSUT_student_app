@@ -34,15 +34,16 @@ class TimetableFragment : Fragment(R.layout.fragment_timetable) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val context: Context = view.context
 
         val prefs: SharedPreferences =
-            view.context.applicationContext.getSharedPreferences(PREFERENCES, Context.MODE_PRIVATE)
+            context.applicationContext.getSharedPreferences(PREFERENCES, Context.MODE_PRIVATE)
         prefEditor = TimetablePreferenceEditor(prefs)
         if (HAS_PARAS_ON_SATURDAY.contains(TimetableNetworkPreferenceEditor(prefs).getGroup())) {
             weekLenght = SIX_DAY_WEEK
         }
 
-        layoutManager = LinearLayoutManager(view.context)
+        layoutManager = LinearLayoutManager(context)
         recyclerView = view.findViewById<RecyclerView>(R.id.paras_list).apply {
             setHasFixedSize(true)
             this.layoutManager = layoutManager
