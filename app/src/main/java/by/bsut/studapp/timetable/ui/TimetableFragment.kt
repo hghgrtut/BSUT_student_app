@@ -5,11 +5,13 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import by.bsut.studapp.R
 import by.bsut.studapp.timetable.constants.HAS_PARAS_ON_SATURDAY
+import by.bsut.studapp.timetable.data.enums.WeekDays
 import by.bsut.studapp.timetable.data.enums.WeekMode
 import by.bsut.studapp.timetable.data.objects.Para
 import by.bsut.studapp.timetable.presenter.dao.ParaDao
@@ -32,8 +34,13 @@ class TimetableFragment : Fragment(R.layout.fragment_timetable) {
     private var weekLenght: Int = FIVE_DAY_WEEK
     private lateinit var prefEditor: TimetablePreferenceEditor
 
+    private lateinit var dayText: TextView
+    private lateinit var weekModeText: TextView
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        dayText = view.findViewById(R.id.day)
+        weekModeText = view.findViewById(R.id.weekMode)
         val context: Context = view.context
 
         val prefs: SharedPreferences =
@@ -50,8 +57,7 @@ class TimetableFragment : Fragment(R.layout.fragment_timetable) {
         }
 
         refreshExcludedWeek()
-
-        day = prefEditor.getDay()
+        refreshDay()
 
         val scope = CoroutineScope(Dispatchers.IO)
         scope.launch { refreshParas(view) }
@@ -63,26 +69,31 @@ class TimetableFragment : Fragment(R.layout.fragment_timetable) {
         }
 
         view.findViewById<Button>(R.id.previousButton).setOnClickListener {
-            val newDay = day - 1
-            changeDay(if (newDay >= 0) newDay else weekLenght - 1)
+            prefEditor.setDay(if (day > 0) day - 1 else weekLenght - 1)
+            refreshDay()
             scope.launch { refreshParas(view) }
         }
 
         view.findViewById<Button>(R.id.nextButton).setOnClickListener {
-            changeDay((day + 1) % weekLenght)
+            prefEditor.setDay((day + 1) % weekLenght)
+            refreshDay()
             scope.launch { refreshParas(view) }
         }
     }
 
-    private fun changeDay(newDay: Int) { // View is needed to refresh ViewAdapter
-        day = newDay
-        prefEditor.setDay(newDay)
+    private fun refreshDay() {
+        day = prefEditor.getDay()
+        dayText.text = getString(daysOfWeek[day].localization)
     }
 
     private fun refreshExcludedWeek() {
-        excludedWeekMode =
-            if (prefEditor.getWeekMode() == WeekMode.UPPER.ordinal) { WeekMode.LOWER.ordinal
-            } else { WeekMode.UPPER.ordinal }
+        if (prefEditor.getWeekMode() == WeekMode.UPPER.ordinal) {
+            excludedWeekMode = WeekMode.LOWER.ordinal
+            weekModeText.text = getString(R.string.week_upper)
+        } else {
+            excludedWeekMode = WeekMode.UPPER.ordinal
+            weekModeText.text = getString(R.string.week_lower)
+        }
     }
 
     private suspend fun refreshParas(view: View) {
@@ -98,5 +109,6 @@ class TimetableFragment : Fragment(R.layout.fragment_timetable) {
     companion object {
         private const val FIVE_DAY_WEEK = 5
         private const val SIX_DAY_WEEK = 6
+        private val daysOfWeek: Array<WeekDays> = WeekDays.values()
     }
 }

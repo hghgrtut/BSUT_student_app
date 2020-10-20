@@ -31,7 +31,11 @@
     <string name="week_day_friday">Пятница</string>
     <string name="week_day_saturday">Суббота</string>
     <string name="week_day_sunday">Воскресенье</string>
-    
+
+    <!-- Week modes localization -->
+    <string name="week_upper">Над</string>
+    <string name="week_lower">Под</string>
+
     <!-- Toolbar menu items -->
     <string name="change_theme">Сменить тему</string>
     <string name="refresh_timetable">Обновить расписание</string>

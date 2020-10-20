@@ -2,7 +2,7 @@ package by.bsut.studapp.timetable.data.enums
 
 import by.bsut.studapp.R
 
-enum class WeekDays(localization: Int) {
+enum class WeekDays(val localization: Int) {
     MONDAY(R.string.week_day_monday),
     TUESDAY(R.string.week_day_tuesday),
     WEDNESDAY(R.string.week_day_wednesday),
