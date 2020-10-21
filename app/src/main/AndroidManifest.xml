@@ -20,6 +20,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:theme="@style/AppTheme"
+            android:name="by.bsut.studapp.ui.activity.settings.SettingsActivity"
+            android:label="@string/settings"/>
+
     </application>
 
 </manifest>

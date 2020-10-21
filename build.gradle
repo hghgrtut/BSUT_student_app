@@ -63,5 +63,5 @@ ext {
     roomVersion = '2.2.5'
     coroutines = '1.3.7'
     daggerVersion = '2.27'
-    navigationVersion = '2.3.0'
+    navigationVersion = '2.3.1'
 }

@@ -22,7 +22,7 @@ data class Para(
     @PrimaryKey(autoGenerate = true) @ColumnInfo(name = PARA_ID) val id: Int? = null,
     @ColumnInfo(name = PARA_DAY_OF_WEEK) val weekday: Int,
     @ColumnInfo(name = PARA_NUMBER) val number: Int,
-    @ColumnInfo(name = TEACHER) val teacher: String? = null,
+    @ColumnInfo(name = TEACHER) val teacher: String,
     @ColumnInfo(name = TYPE) val type: Int,
     @ColumnInfo(name = AUDITORY) val auditory: String,
     @ColumnInfo(name = SUBJECT) val subject: String,
@@ -31,3 +31,16 @@ data class Para(
     @ColumnInfo(name = MILITARY) val isMilitary: Boolean = false,
     @ColumnInfo(name = PODGROUPA) val podgroupa: Int = ALL_GROUPS
 ) { companion object { const val ALL_GROUPS = 0 } }
+/**
+ * id - key for storing in database
+ * weekDay - day of the week, when the para is held (see WeekDays enum for details)
+ * number - number of para (1-7)
+ * teacher - teacher that conducts a class
+ * type - type of the para (see ParaTypes enum)
+ * auditory - class where para is being held
+ * subject - subject of the para (e.g. "Object-oriented programming", "Computer networks" and so on)
+ * weekMode - is para held every week or above/under line (see WeekMode enum for details)
+ * extraInfo - additional info for this para (task or other info that can be represented as String)
+ * isMilitary - is para only for students of military chair
+ * podgroupa - number of podgroupa for which class is held
+ */
